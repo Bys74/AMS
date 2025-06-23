@@ -10,23 +10,38 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">🏯 AMS</div>
-    <div class="burger" id="burger">
-      <span></span><span></span><span></span>
-    </div>
-    <nav class="nav" id="nav">
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#club">Le Club</a></li>
-        <li><a href="#actualite">Actualité</a></li>
-        <li><a href="#galerie">Galerie</a></li>
-        <li><a href="#horaires">Horaires</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <div class="logo">🏯 AMS</div>
+
+  <!-- Icône Facebook mobile (à gauche du burger) -->
+  <div class="fb-mobile">
+    <a href="https://www.facebook.com/TON_PROFIL_OU_PAGE" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png" alt="Facebook" style="height:24px;">
+    </a>
+  </div>
+
+  <div class="burger" id="burger">
+    <span></span><span></span><span></span>
+  </div>
+  
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#club">Le Club</a></li>
+      <li><a href="#actualite">Actualité</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#horaires">Horaires</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="fb-in-menu">
+        <a href="https://www.facebook.com/TON_PROFIL_OU_PAGE" target="_blank" rel="noopener noreferrer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png" alt="Facebook" style="height:20px; vertical-align:middle;">
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
 
   <!-- ACCUEIL -->
   <section id="accueil" class="hero">
@@ -70,23 +85,47 @@
   </div>
 </section>
 
-  <!-- GALERIE -->
-  <section id="galerie" class="section light">
-    <h2>Galerie</h2>
+<section id="galerie" class="section light">
+  <h2>Galerie</h2>
+
+  <!-- Menu Albums -->
+  <div class="albums-menu">
+    <button onclick="showAlbum('karate')">Karaté</button>
+    <button onclick="showAlbum('judo')">Judo</button>
+    <button onclick="showAlbum('taekwondo')">Taekwondo</button>
+  </div>
+
+  <!-- Album Karaté -->
+  <div class="album" id="album-karate">
+    <h3>Karaté</h3>
     <div class="gallery">
-      <img src="images/karate.jpg" alt="karate" />
-      <img src="images/Judo.jpg" alt="judo" />
-      <img src="images/Taekwondo.jpg" alt="taekwondo" />
+      <img src="images/karate.jpg" alt="Karaté 1" />
+      <img src="images/karate.jpg" alt="Karaté 2" />
+      <!-- Ajoute d'autres images ici -->
     </div>
+  </div>
 
-<h3>Vidéo d'entraînement</h3>
-<div class="video-container">
-  <iframe src="https://www.youtube.com/embed/zoYsWl3NeMQ" 
-    title="Entraînement Arts Martiaux"
-    frameborder="0" allowfullscreen></iframe>
-</div>
+  <!-- Album Judo -->
+  <div class="album" id="album-judo" style="display:none;">
+    <h3>Judo</h3>
+    <div class="gallery">
+      <img src="images/judo.jpg" alt="Judo 1" />
+      <img src="images/judo.jpg" alt="Judo 2" />
+      <!-- Ajoute d'autres images ici -->
+    </div>
+  </div>
 
-  </section>
+  <!-- Album Taekwondo -->
+  <div class="album" id="album-taekwondo" style="display:none;">
+    <h3>Taekwondo</h3>
+    <div class="gallery">
+      <img src="images/taekwondo.jpg" alt="Taekwondo 1" />
+      <img src="images/taekwondo.jpg" alt="Taekwondo 2" />
+      <!-- Ajoute d'autres images ici -->
+    </div>
+  </div>
+</section>
+
 
   <!-- HORAIRES -->
 <section id="horaires" class="section dark">
