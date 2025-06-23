@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arts Martiaux Sallanches</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🏯 AMS</div>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#club">Le Club</a></li>
+        <li><a href="#actualite">Actualité</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#horaires">Horaires</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ACCUEIL -->
+  <section id="accueil" class="hero">
+    <div class="hero-content">
+      <h1>Arts Martiaux Sallanches</h1>
+      <p>Discipline. Respect. Force intérieure.</p>
+    </div>
+  </section>
+
+  <!-- LE CLUB -->
+  <section id="club" class="section dark">
+    <h2>Le Club</h2>
+    <p>Nous enseignons le karaté, judo, taekwondo et plus encore à Sallanches depuis 1990. Tous niveaux, enfants et adultes.</p>
+  </section>
+
+  <!-- ACTUALITÉ -->
+<section id="actualite" class="section light">
+  <h2>Actualité</h2>
+  <div class="actualite-container">
+    <div class="actu-item">
+      <div class="actu-meta">
+        <span class="date">23 Juin 2025</span>
+        <span class="heure">18h00</span>
+      </div>
+      <p class="actu-texte">
+        Stage de perfectionnement en karaté ce samedi au dojo ! Ouvert à tous niveaux.
+      </p>
+    </div>
+
+    <div class="actu-item">
+      <div class="actu-meta">
+        <span class="date">15 Juin 2025</span>
+        <span class="heure">10h30</span>
+      </div>
+      <p class="actu-texte">
+        Résultats des compétitions départementales : bravo à nos judokas pour leurs performances !
+      </p>
+    </div>
+
+    <!-- Tu peux dupliquer ce bloc pour chaque info -->
+  </div>
+</section>
+
+  <!-- GALERIE -->
+  <section id="galerie" class="section light">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <img src="images/karate.jpg" alt="karate" />
+      <img src="images/Judo.jpg" alt="judo" />
+      <img src="images/Taekwondo.jpg" alt="taekwondo" />
+    </div>
+
+<h3>Vidéo d'entraînement</h3>
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/zoYsWl3NeMQ" 
+    title="Entraînement Arts Martiaux"
+    frameborder="0" allowfullscreen></iframe>
+</div>
+
+  </section>
+
+  <!-- HORAIRES -->
+<section id="horaires" class="section dark">
+  <h2>Horaires</h2>
+
+  <div class="horaires-container">
+    <div class="pratique">
+      <h3>Karaté</h3>
+      <ul>
+        <li>Lundi : 18h – 20h</li>
+        <li>Mercredi : 17h – 19h</li>
+      </ul>
+    </div>
+    <div class="pratique">
+      <h3>Judo</h3>
+      <ul>
+        <li>Mardi : 18h – 20h</li>
+        <li>Jeudi : 17h – 19h</li>
+      </ul>
+    </div>
+    <div class="pratique">
+      <h3>Taekwondo</h3>
+      <ul>
+        <li>Vendredi : 18h – 21h</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="section light">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Nom" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <h3>Où nous trouver</h3>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=sallanches+salle+des+sports&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Club d'Arts Martiaux de Sallanches</p>
+  </footer>
+
+</body>
+</html>
