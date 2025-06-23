@@ -19,3 +19,16 @@ navLinks.forEach(link => {
     }
   });
 });
+
+function showAlbum(album) {
+  const albums = ['karate', 'judo', 'taekwondo'];
+  albums.forEach(name => {
+    const el = document.getElementById('album-' + name);
+    if(name === album) {
+      el.style.display = 'block';
+    } else {
+      el.style.display = 'none';
+    }
+  });
+}
+
