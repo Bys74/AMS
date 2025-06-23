@@ -29,6 +29,72 @@ header {
   z-index: 1000;
 }
 
+
+/* Conteneur Facebook mobile - caché desktop */
+.fb-mobile {
+  display: none;
+}
+
+/* Positionnement et style sur mobile */
+@media (max-width: 768px) {
+  .fb-mobile {
+    display: flex;
+    align-items: center;
+    margin-right: 15px; /* espace entre FB et burger */
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: #111;
+    padding: 1rem 2rem;
+    border-bottom: 3px solid #8b0000;
+    z-index: 1000;
+  }
+
+  /* On met le logo + fb-mobile + burger en flex */
+  header > .logo {
+    flex: none;
+  }
+  
+  header > .fb-mobile {
+    flex: none;
+  }
+  
+  header > .burger {
+    flex: none;
+  }
+
+  /* Cacher le menu quand burger fermé */
+  nav {
+    display: none;
+  }
+  nav.active {
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Cacher FB dans menu sur mobile */
+  .fb-in-menu {
+    display: none;
+  }
+}
+
+
 .logo {
   font-size: 2rem;
   color: #fff;
@@ -128,6 +194,44 @@ nav ul li a:hover {
 .actu-texte {
   font-size: 1.1rem;
   line-height: 1.6;
+}
+
+.albums-menu {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.albums-menu button {
+  background: #8b0000;
+  color: white;
+  border: none;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.albums-menu button:hover {
+  background: #a80000;
+}
+
+/* Optionnel: style galerie comme tu as déjà */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #8b0000;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
 
