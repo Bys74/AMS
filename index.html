@@ -1,184 +1,193 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arts Martiaux Sallanches</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Association Arts Martiaux</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="logo">🏯 AMS</div>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🥋 Arts Martiaux</div>
+    <nav id="nav">
+      <a href="#accueil">Accueil</a>
+      <a href="#actualite">Actualite</a>
+      <a href="#disciplines">Disciplines</a>
+      <a href="#planning">Planning</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </header>
 
-  <!-- Icône Facebook mobile (à gauche du burger) -->
-  <div class="fb-mobile">
-    <a href="https://www.facebook.com/TON_PROFIL_OU_PAGE" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png" alt="Facebook" style="height:24px;">
-    </a>
-  </div>
-
-  <div class="burger" id="burger">
-    <span></span><span></span><span></span>
-  </div>
-  
-  <nav class="nav" id="nav">
-    <ul>
-      <li><a href="#accueil">Accueil</a></li>
-      <li><a href="#club">Le Club</a></li>
-      <li><a href="#actualite">Actualité</a></li>
-      <li><a href="#galerie">Galerie</a></li>
-      <li><a href="#horaires">Horaires</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li class="fb-in-menu">
-        <a href="https://www.facebook.com/TON_PROFIL_OU_PAGE" target="_blank" rel="noopener noreferrer">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png" alt="Facebook" style="height:20px; vertical-align:middle;">
-        </a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-
-
-  <!-- ACCUEIL -->
+  <!-- HERO -->
   <section id="accueil" class="hero">
     <div class="hero-content">
-      <h1>Arts Martiaux Sallanches</h1>
-      <p>Discipline. Respect. Force intérieure.</p>
+      <h1>Bienvenue dans notre Dojo</h1>
+      <p>Découvrez nos arts martiaux : Grappling, Jiu-Jitsu, Karaté et bien plus encore.</p>
+      <a href="#essai" class="btn">Contact</a>
     </div>
-  </section>
-
-  <!-- LE CLUB -->
-  <section id="club" class="section dark">
-    <h2>Le Club</h2>
-    <p>Nous enseignons le karaté, judo, taekwondo et plus encore à Sallanches depuis 1990. Tous niveaux, enfants et adultes.</p>
   </section>
 
   <!-- ACTUALITÉ -->
-<section id="actualite" class="section light">
+
+
+<section id="actualite" class="fade-in">
   <h2>Actualité</h2>
-  <div class="actualite-container">
-    <div class="actu-item">
-      <div class="actu-meta">
-        <span class="date">23 Juin 2025</span>
-        <span class="heure">18h00</span>
+  <div class="news-grid">
+
+<article class="news-card slide-up">
+  <img src="images/planing.jpg" alt="Tournoi régional">
+  <div class="news-content">
+    <h3>Horraires Saison 2025/2026</h3>
+    <p class="excerpt">
+      Nos athlètes participeront au grand tournoi régional de Karaté...
+    </p>
+    <p class="more-text">
+      L’événement se déroulera le 20 octobre au gymnase municipal. Venez nombreux
+      encourager nos combattants et partager un moment convivial avec toute
+      l’association !
+    </p>
+    <a href="#" class="news-btn toggle-text">Lire plus</a>
+    <!-- Lien pour télécharger l'image -->
+    <a href="images/planning.jpg" download="Horraires_Saison_2025_2026.jpg" class="news-btn" style="margin-top:10px; display:inline-block;">
+      Télécharger le planning
+    </a>
+  </div>
+</article>
+
+
+    <article class="news-card slide-up">
+      <img src="images/jiu.jpg" alt="Stage Jiu-Jitsu">
+      <div class="news-content">
+        <h3>Stage de Jiu-Jitsu</h3>
+        <p class="excerpt">
+          Un stage exceptionnel animé par un maître international aura lieu...
+        </p>
+        <p class="more-text">
+          Le 5 novembre, notre dojo accueillera un professeur renommé pour un stage
+          intensif. Ouvert à tous niveaux, venez progresser et échanger !
+        </p>
+        <a href="#" class="news-btn toggle-text">Lire plus</a>
       </div>
-      <p class="actu-texte">
-        Stage de perfectionnement en karaté ce samedi au dojo ! Ouvert à tous niveaux.
-      </p>
-    </div>
+    </article>
 
-    <div class="actu-item">
-      <div class="actu-meta">
-        <span class="date">15 Juin 2025</span>
-        <span class="heure">10h30</span>
+    <article class="news-card slide-up">
+      <img src="https://via.placeholder.com/600x350" alt="Nouveaux cours">
+      <div class="news-content">
+        <h3>Nouveaux cours enfants</h3>
+        <p class="excerpt">
+          Découvrez nos cours adaptés aux plus jeunes, tous les mercredis...
+        </p>
+        <p class="more-text">
+          Ces cours ludiques initient les enfants aux arts martiaux en douceur, tout
+          en favorisant la discipline et le respect.
+        </p>
+        <a href="#" class="news-btn toggle-text">Lire plus</a>
       </div>
-      <p class="actu-texte">
-        Résultats des compétitions départementales : bravo à nos judokas pour leurs performances !
-      </p>
-    </div>
+    </article>
 
-    <!-- Tu peux dupliquer ce bloc pour chaque info -->
-  </div>
-</section>
-
-<section id="galerie" class="section light">
-  <h2>Galerie</h2>
-
-  <!-- Menu Albums -->
-  <div class="albums-menu">
-    <button onclick="showAlbum('karate')">Karaté</button>
-    <button onclick="showAlbum('judo')">Judo</button>
-    <button onclick="showAlbum('taekwondo')">Taekwondo</button>
-  </div>
-
-  <!-- Album Karaté -->
-  <div class="album" id="album-karate">
-    <h3>Karaté</h3>
-    <div class="gallery">
-      <img src="images/karate.jpg" alt="Karaté 1" />
-      <img src="images/karate.jpg" alt="Karaté 2" />
-      <!-- Ajoute d'autres images ici -->
-    </div>
-  </div>
-
-  <!-- Album Judo -->
-  <div class="album" id="album-judo" style="display:none;">
-    <h3>Judo</h3>
-    <div class="gallery">
-      <img src="images/judo.jpg" alt="Judo 1" />
-      <img src="images/judo.jpg" alt="Judo 2" />
-      <!-- Ajoute d'autres images ici -->
-    </div>
-  </div>
-
-  <!-- Album Taekwondo -->
-  <div class="album" id="album-taekwondo" style="display:none;">
-    <h3>Taekwondo</h3>
-    <div class="gallery">
-      <img src="images/taekwondo.jpg" alt="Taekwondo 1" />
-      <img src="images/taekwondo.jpg" alt="Taekwondo 2" />
-      <!-- Ajoute d'autres images ici -->
-    </div>
   </div>
 </section>
 
 
-  <!-- HORAIRES -->
-<section id="horaires" class="section dark">
-  <h2>Horaires</h2>
 
-  <div class="horaires-container">
-    <div class="pratique">
-      <h3>Karaté</h3>
-      <ul>
-        <li>Lundi : 18h – 20h</li>
-        <li>Mercredi : 17h – 19h</li>
-      </ul>
+  <!-- DISCIPLINES -->
+  <section id="disciplines">
+    <h2>Nos disciplines</h2>
+    <div class="discipline fade-in">
+      <img src="images/grappling.jpg" alt="Grappling">
+      <div class="discipline-text">
+        <h3>Grappling</h3>
+        <p>Un art martial moderne qui se concentre sur la lutte au sol, les soumissions et la technique.</p>
+      </div>
     </div>
-    <div class="pratique">
-      <h3>Judo</h3>
-      <ul>
-        <li>Mardi : 18h – 20h</li>
-        <li>Jeudi : 17h – 19h</li>
-      </ul>
-    </div>
-    <div class="pratique">
-      <h3>Taekwondo</h3>
-      <ul>
-        <li>Vendredi : 18h – 21h</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-  <!-- CONTACT -->
-  <section id="contact" class="section light">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Nom" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-
-    <h3>Où nous trouver</h3>
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps?q=sallanches+salle+des+sports&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <div class="discipline reverse fade-in">
+      <img src="https://via.placeholder.com/800x500" alt="Karaté">
+      <div class="discipline-text">
+        <h3>Karaté</h3>
+        <p>Art martial traditionnel japonais, basé sur les frappes, la discipline et le respect.</p>
+      </div>
     </div>
   </section>
 
+  <!-- PLANNING -->
+  <section id="planning" class="fade-in">
+    <h2>Planning hebdomadaire</h2>
+    <div class="grid">
+      <div class="card slide-up">
+        <h3>Lundi</h3>
+        <p>18h - Grappling</p>
+      </div>
+      <div class="card slide-up">
+        <h3>Mercredi</h3>
+        <p>19h - Karaté</p>
+      </div>
+      <div class="card slide-up">
+        <h3>Vendredi</h3>
+        <p>20h - Jiu-Jitsu</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFS -->
+  <section id="tarifs" class="fade-in">
+    <h2>Nos tarifs</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Abonnement 1 discipline</h3>
+        <p>50€ / mois</p>
+      </div>
+      <div class="card">
+        <h3>Accès complet</h3>
+        <p>90€ / mois</p>
+      </div>
+      <div class="card">
+        <h3>Cours d’essai</h3>
+        <p>Gratuit</p>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- GALERIE -->
+  <section id="galerie" class="fade-in">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300" alt="Photo 1">
+      <img src="https://via.placeholder.com/400x300" alt="Photo 2">
+      <img src="https://via.placeholder.com/400x300" alt="Photo 3">
+      <img src="https://via.placeholder.com/400x300" alt="Photo 4">
+      <img src="https://via.placeholder.com/400x300" alt="Photo 5">
+      <img src="https://via.placeholder.com/400x300" alt="Photo 6">
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <form id="essai">
+      <input type="text" placeholder="Votre nom" required>
+      <input type="email" placeholder="Votre email" required>
+      <textarea placeholder="Votre message"></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Club d'Arts Martiaux de Sallanches</p>
+    <p>&copy; 2025 Association Arts Martiaux - Tous droits réservés</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
