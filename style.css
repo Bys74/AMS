@@ -1,4 +1,6 @@
-/* RESET */
+/* ==============================
+   RESET
+============================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,39 +14,47 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
+/* ==============================
+   HEADER
+============================== */
 header {
-  position: sticky;
-  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
   padding: 15px 40px;
-  border-bottom: 2px solid #8b0000;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
   z-index: 1000;
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #8b0000;
+  font-weight: 700;
+  color: #e63946;
+  text-transform: uppercase;
 }
 
-nav {
-  display: flex;
-  gap: 25px;
+.logo img {
+  height: 45px;
+  width: auto;
+  border-radius: 8px;
 }
 
 nav a {
+  margin: 0 12px;
   text-decoration: none;
-  color: #333;
   font-weight: 500;
-  transition: color 0.3s;
+  color: #111;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #8b0000;
+  color: #e63946;
 }
 
 .menu-toggle {
@@ -53,7 +63,9 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* HERO */
+/* ==============================
+   HERO
+============================== */
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
@@ -66,22 +78,21 @@ nav a:hover {
   padding: 0 20px;
 }
 
-
 .hero-content h1 {
   font-size: clamp(2.5rem, 6vw, 4rem);
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .hero-content p {
   font-size: clamp(1rem, 2vw, 1.5rem);
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 
 .btn {
   background: #8b0000;
   color: #fff;
-  padding: 14px 30px;
-  border-radius: 8px;
+  padding: 14px 40px;
+  border-radius: 80px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s;
@@ -92,7 +103,9 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* SECTIONS */
+/* ==============================
+   SECTIONS
+============================== */
 section {
   width: 100%;
   padding: 80px 10%;
@@ -105,12 +118,15 @@ h2 {
   color: #8b0000;
 }
 
-/* DISCIPLINES */
+/* ==============================
+   DISCIPLINES
+============================== */
 .discipline {
   display: flex;
   align-items: center;
   gap: 40px;
   margin-bottom: 60px;
+  flex-wrap: wrap;
 }
 
 .discipline.reverse {
@@ -119,7 +135,7 @@ h2 {
 
 .discipline img {
   flex: 1;
-  max-width: 600px;
+  max-width: 300px;
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
@@ -129,43 +145,74 @@ h2 {
   font-size: 1.1rem;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+/* ==============================
+   SECTION TITLES
+============================== */
+.planning-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #8b0000;
+  font-weight: 700;
+  position: relative;
 }
 
-.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+.planning-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #e63946;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* ACTUALITÉ */
-.news-grid {
+/* ==============================
+   GRID / CARDS
+============================== */
+.grid, .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  padding: 0 20px;
 }
 
-.news-card {
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
+.card, .news-card {
+  background: linear-gradient(145deg, #fff, #f7f7f7);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-left: 6px solid #d10516c7;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover, .news-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.card h3, .news-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #e63946;
+  font-weight: 600;
+}
+
+.schedule li {
+  margin: 12px 0;
+  padding-left: 10px;
+  border-left: 3px solid #e63946;
+  transition: all 0.3s ease;
+}
+
+.schedule li:hover {
+  border-left-color: #111;
+  padding-left: 15px;
+}
+
+/* ==============================
+   ACTUALITÉ / NEWS
+============================== */
 .news-card img {
   width: 100%;
   height: 200px;
@@ -174,22 +221,9 @@ h2 {
 
 .news-content {
   padding: 20px;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.news-content h3 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  color: #8b0000;
-}
-
-.news-content p {
-  flex: 1;
-  font-size: 1rem;
-  margin-bottom: 15px;
 }
 
 .news-btn {
@@ -208,18 +242,21 @@ h2 {
   transform: scale(1.05);
 }
 
-.news-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+/* Texte actualité déroulant */
+.more-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
+.news-card.open .more-text {
+  max-height: 1000px;
+  margin-top: 10px;
+}
 
-
-
-
-
-
-/* FORM */
+/* ==============================
+   FORM
+============================== */
 form {
   display: flex;
   flex-direction: column;
@@ -249,7 +286,9 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* FOOTER */
+/* ==============================
+   FOOTER
+============================== */
 footer {
   background: #222;
   color: #fff;
@@ -258,7 +297,9 @@ footer {
   margin-top: 40px;
 }
 
-/* ANIMATIONS */
+/* ==============================
+   ANIMATIONS
+============================== */
 .fade-in, .slide-up {
   opacity: 0;
   transform: translateY(30px);
@@ -271,16 +312,86 @@ footer {
   transform: translateY(0);
 }
 
+/* ==============================
+   GALERIE / ALBUMS
+============================== */
+#galerie {
+  text-align: center;
+  padding: 80px 10%;
+}
 
-/* GALERIE */
+#galerie h2 {
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+  color: #8b0000;
+}
+
+/* Conteneur des albums */
+.albums-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-content: center; /* centre la grille */
+  align-items: start;
+  padding: 0 20px;
+}
+
+/* Album individuel */
+.album {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centre chaque album */
+  gap: 10px;
+}
+
+/* Titre de l’album au-dessus de la couverture */
+.album .album-title {
+  color: #8b0000;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Couverture album */
+.album .cover {
+  width: 100%;
+  max-width: 350px; /* limite la largeur sur grands écrans */
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.album .cover img {
+  width: 100%;
+  aspect-ratio: 4/3; /* ratio pour éviter que l'image soit étirée */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.album .cover:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Galerie des images internes */
+.gallery.hidden {
+  display: none;
+}
+
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
+  margin-top: 15px;
+  justify-items: center;
 }
 
 .gallery img {
   width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -291,96 +402,61 @@ footer {
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-/* LIGHTBOX */
-#lightbox {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  padding-top: 80px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background: rgba(0,0,0,0.9);
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 1200px) {
+  .albums-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
-#lightbox img {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-}
-
-#lightbox .close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #fff;
-  font-size: 2.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-#lightbox .close:hover {
-  color: #8b0000;
-}
-
-
-
-
-/* RESPONSIVE */
 @media (max-width: 992px) {
-  .discipline {
-    flex-direction: column;
-  }
-  .discipline.reverse {
-    flex-direction: column;
-  }
-  .discipline img {
-    width: 100%;
-  }
-  .discipline-text {
-    text-align: center;
+  .albums-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
+  .albums-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==============================
+   RESPONSIVE HEADER & NAV
+============================== */
+
+/* Cacher le menu desktop en dessous de 768px */
+@media (max-width: 1050px) {
   nav {
     display: none;
     flex-direction: column;
     position: absolute;
+    top: 70px; /* juste sous le header */
     right: 0;
-    top: 70px;
+    width: 200px;
     background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     padding: 20px;
-    border: 1px solid #ddd;
+    border-radius: 0 0 10px 10px;
   }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+    text-align: left;
+  }
+
+  /* Affiche le bouton burger */
+  .menu-toggle {
+    display: block;
+    color: #111;
+  }
+
+  /* Quand le menu est actif */
   nav.active {
     display: flex;
   }
-  .menu-toggle {
-    display: block;
-  }
-}
-
-/* Texte actualité déroulant */
-.more-text {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-
-
-.news-card.open .more-text {
-  max-height: 1000px; /* assez grand pour couvrir tous tes textes */
-  margin-top: 10px;
-}
-
-.news-content {
-  padding: 20px;
-  display: block; /* important */
 }
