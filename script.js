@@ -19,28 +19,51 @@ const observer = new IntersectionObserver(entries => {
 
 elements.forEach(el => observer.observe(el));
 
-// Lightbox galerie
-const gallery = document.querySelectorAll(".gallery img");
+const galleries = document.querySelectorAll(".gallery");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const close = document.querySelector("#lightbox .close");
+const prev = document.querySelector("#lightbox .prev");
+const next = document.querySelector("#lightbox .next");
 
-gallery.forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "block";
-    lightboxImg.src = img.src;
+let currentAlbum = [];
+let currentIndex = 0;
+
+// Fonction pour ouvrir une image
+function openLightbox(images, index) {
+  currentAlbum = images;
+  currentIndex = index;
+  lightboxImg.src = currentAlbum[currentIndex].src;
+  lightbox.style.display = "block";
+}
+
+// Clic sur une image
+galleries.forEach(gallery => {
+  const images = gallery.querySelectorAll("img");
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      openLightbox(images, index);
+    });
   });
 });
 
-close.addEventListener("click", () => {
-  lightbox.style.display = "none";
+// Navigation
+next.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % currentAlbum.length;
+  lightboxImg.src = currentAlbum[currentIndex].src;
 });
 
-window.addEventListener("click", e => {
-  if (e.target === lightbox) {
-    lightbox.style.display = "none";
-  }
+prev.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + currentAlbum.length) % currentAlbum.length;
+  lightboxImg.src = currentAlbum[currentIndex].src;
 });
+
+// Fermeture
+close.addEventListener("click", () => lightbox.style.display = "none");
+window.addEventListener("click", e => {
+  if (e.target === lightbox) lightbox.style.display = "none";
+});
+
 
 // Voir plus / Voir moins pour chaque actu (accordéon fluide)
 document.querySelectorAll(".toggle-text").forEach(btn => {
@@ -78,3 +101,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     nav.classList.remove("active"); // ferme le menu sur mobile
   });
 });
+
+// Ouvrir l'album au clic sur la couverture
+document.querySelectorAll('.album .cover').forEach(cover => {
+  cover.addEventListener('click', () => {
+    const album = cover.closest('.album');
+    const gallery = album.querySelector('.gallery');
+    gallery.classList.toggle('hidden');
+    gallery.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
